@@ -11,3 +11,48 @@ header{position:sticky;top:0;z-index:30;height:88px;gap:20px;border-bottom:1px s
 /* Enlarge inherited body text by the same two points. */
 body{font-size:calc(16px + 2pt)}
 @media(max-width:600px){header nav{flex-wrap:wrap;justify-content:flex-start;column-gap:12px;overflow:visible}header nav a{flex-shrink:0}header{padding-bottom:4px}.hero h1{white-space:normal}.hero-top{flex-wrap:wrap;gap:8px}.hero-top .eyebrow{line-height:1.5}.portrait figcaption{flex-wrap:wrap;gap:5px}.workflow{gap:6px}.workflow b{overflow-wrap:anywhere}.button{max-width:100%}.brand{letter-spacing:1px}html{scroll-padding-top:170px}}
+
+/* Preview of supplied cybersecurity hero artwork. */
+.portrait>img{object-position:55% center;filter:none}
+@media(max-width:600px){.portrait>img{object-position:55% center}}
+/* Soft sculpted hero treatment, preview only. */
+.portrait{isolation:isolate;overflow:visible;border-radius:46% 46% 13% 30% / 28% 35% 16% 25%;background:radial-gradient(ellipse at 58% 44%,#73cfff45,transparent 69%)}
+.portrait>img{border-radius:inherit;object-position:55% center;mask-image:radial-gradient(ellipse 73% 78% at 57% 43%,#000 45%,#000 62%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 73% 78% at 57% 43%,#000 45%,#000 62%,transparent 100%)}
+.portrait:after{border-radius:inherit;background:linear-gradient(90deg,#2449e854,transparent 30%),linear-gradient(0deg,#2449e8b3,transparent 32%);pointer-events:none}
+.portrait:before{content:'';position:absolute;inset:8px 10px 30px 18px;border:1px solid #a0daff45;border-radius:46% 46% 13% 30% / 28% 35% 16% 25%;z-index:-1;transform:rotate(4deg);pointer-events:none}
+.portrait .scan-label{top:26px;right:24px;border-radius:20px;backdrop-filter:blur(8px);font-size:calc(8px + 2pt)}
+.portrait figcaption{bottom:20px;left:38px;right:30px;font-size:calc(8px + 2pt)}
+@media(max-width:600px){.portrait{min-height:360px}.portrait .scan-label{right:15px;top:25px;font-size:calc(7px + 2pt)}.portrait figcaption{left:22px;right:20px;font-size:calc(7px + 2pt);bottom:15px}}
+/* Reference shape: diagonally clipped top-right and bottom-left corners. */
+.portrait{border-radius:0;background:none;isolation:isolate;overflow:hidden;clip-path:polygon(0 0,91% 0,100% 16%,100% 100%,9% 100%,0 84%)}
+.portrait>img{border-radius:0;mask-image:none;-webkit-mask-image:none;object-position:55% center;filter:none}
+.portrait:before{display:none}
+.portrait:after{border-radius:0;background:linear-gradient(0deg,#07163c99,transparent 24%)}
+.portrait .scan-label{top:22px;right:60px;border-radius:0;backdrop-filter:none}
+.portrait figcaption{bottom:19px;left:65px;right:20px;font-size:calc(8px + 2pt)}
+@media(max-width:600px){.portrait .scan-label{right:40px;top:18px}.portrait figcaption{left:40px;right:15px;font-size:calc(7px + 2pt)}}
+.portrait{clip-path:polygon(0 0,calc(100% - 55px) 0,100% 55px,100% 100%,55px 100%,0 calc(100% - 55px))}
+@media(max-width:600px){.portrait{clip-path:polygon(0 0,calc(100% - 35px) 0,100% 35px,100% 100%,35px 100%,0 calc(100% - 35px))}}
+/* Align the desktop image bottom with the project action row. */
+@media(min-width:851px){.portrait{align-self:start;min-height:0;height:clamp(340px,29vw,410px)}.portrait>img{object-position:55% 25%}}
+/* Compact hero: trust statement follows the skills row. */
+.hero>.hero-note{margin-top:16px;padding-top:16px;max-width:none}
+.hero-footer{margin-top:22px}
+.hero-grid{align-items:start}
+@media(min-width:851px){.hero-grid .portrait{height:100%;min-height:340px;align-self:stretch}.hero-grid{grid-template-columns:1fr 1.1fr}.hero-copy{padding-bottom:0}}
+@media(max-width:600px){.hero>.hero-note{margin-top:14px;padding-top:14px}.hero-footer{margin-top:18px}}
+/* Trust on the left; Python skill on the right. */
+.hero>.hero-note{display:flex;align-items:center;gap:14px}.hero>.hero-note>.python-skill{margin-left:auto;display:flex;align-items:center;gap:12px;padding-left:22px;border-left:1px solid #ffffff35;flex-shrink:0}.python-skill svg{width:44px;height:44px}.python-skill>span{font:600 13px 'DM Sans',sans-serif;letter-spacing:1px;color:#fff}.python-skill .python-detail{display:block;font:11px 'DM Sans',sans-serif;color:#c5d1ff;letter-spacing:0;margin-top:5px}.portrait .scan-label{left:18px;right:auto;top:18px;font-size:11px}.hero-footer{justify-content:flex-start}
+@media(max-width:600px){.hero>.hero-note{flex-wrap:wrap}.hero>.hero-note>div:not(.python-skill){flex:1;min-width:180px}.hero>.hero-note>.python-skill{margin-left:0;padding:12px 0 0 0;border-left:0;border-top:1px solid #ffffff35;width:100%;justify-content:flex-end}.python-skill svg{width:36px;height:36px}.portrait .scan-label{left:14px;right:auto;top:14px;font-size:10px}}
+.hero>.hero-note{margin-top:22px;padding-top:20px}.discover-button{margin-left:auto;display:inline-flex;align-items:center;gap:24px;padding:13px 18px;border:1px solid #ffffff70;border-radius:3px;font-size:13px;font-weight:500;color:white;flex-shrink:0}.discover-button span{font-size:18px;color:white}.discover-button:hover{background:#ffffff15;opacity:1}
+@media(max-width:600px){.hero>.hero-note{gap:12px}.discover-button{margin-left:0;width:100%;justify-content:space-between;margin-top:5px}}
+/* Refine hero labels and title spacing. */
+.hero-top .eyebrow,.hero-top>.mono{color:#081b58;font-weight:700}
+.hero h1{font-size:calc(22px + 2pt);letter-spacing:-.6px;margin:17px 0 12px;line-height:1.2}
+@media(max-width:600px){.hero h1{font-size:calc(19px + 2pt);margin:14px 0 10px}.hero-top .eyebrow{font-size:calc(8px + 2pt)}.hero-top>.mono{display:block;font-size:calc(7px + 2pt);line-height:1.5}}
+/* Dark label backgrounds and a matching diagonal hero silhouette. */
+.hero-top .eyebrow,.hero-top>.mono{color:#eef5ff;background:#0b1b50;padding:9px 12px;border-radius:3px;font-weight:500}
+.hero{border-radius:0;clip-path:polygon(0 0,calc(100% - 42px) 0,100% 42px,100% 100%,42px 100%,0 calc(100% - 42px))}
+.hero-top{padding-right:12px}.hero>.hero-note{padding-bottom:6px}
+@media(max-width:600px){.hero{clip-path:polygon(0 0,calc(100% - 25px) 0,100% 25px,100% 100%,25px 100%,0 calc(100% - 25px))}.hero-top{padding-right:0}.hero-top .eyebrow,.hero-top>.mono{padding:8px 10px}.hero>.hero-note{padding-bottom:12px}}
+.hero-top .eyebrow,.hero-top>.mono{background:transparent;padding:0;border-radius:0;color:#dce7ff;font-weight:500}
